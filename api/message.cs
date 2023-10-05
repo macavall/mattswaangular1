@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 
 namespace http1
 {
-    public class message
+    public class http1
     {
         private readonly ILogger _logger;
 
