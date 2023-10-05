@@ -17,6 +17,8 @@ namespace http1
         [Function("message")]
         public string Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequestData req)
         {
+            System.Threading.Thread.Sleep(20000);
+
             _logger.LogInformation("C# HTTP trigger function processed a request.");
 
             return "THIS IS MY STRING";
