@@ -3,9 +3,9 @@ using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
 
-namespace net7iso
+namespace http1
 {
-    public class http1
+    public class message
     {
         private readonly ILogger _logger;
 
@@ -14,7 +14,7 @@ namespace net7iso
             _logger = loggerFactory.CreateLogger<http1>();
         }
 
-        [Function("http1")]
+        [Function("message")]
         public string Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequestData req)
         {
             _logger.LogInformation("C# HTTP trigger function processed a request.");
